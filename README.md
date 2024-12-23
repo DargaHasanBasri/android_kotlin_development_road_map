@@ -38,7 +38,7 @@ GitHub üzerindeki projeyi yerel makinenize klonlamak için aşağıdaki komutu 
 ```
 ## 2. Projeyi Çalıştırın
 - Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
-  - Main.kt dosyasına gelin aşağıdaki ekran görüntüsünde 3. satırda bulunan run butonu ile çalıştırabilirsiniz
+  - Main.kt dosyasına gelin aşağıdaki ekran görüntüsünde `fun main()` fonksiyonunun yanında bulunan run butonu ile çalıştırabilirsiniz
 
 ![Image Failed Load](/images/project_run_one.png)
 
@@ -107,6 +107,58 @@ Name : Hasan
 Age : 24
 Total Water Consumption : 11.0
 Average Water Consumption : 3.6666667
+--------------------------------------------------
+```
+
+## Varyant 4:
+- Farklı veri türlerinde (örneğin, int ve float) iki değişkenin değerlerini takas eden bir program oluşturun.
+
+## Varyant 5:
+- Uzunluk ve genişlik bilgilerini kullanıcıdan alarak bir dikdörtgenin alanını hesaplayan bir program yazın.
+
+### Senaryo
+- Varyant 4 ve 5 için senaryo:
+```plaintext
+Bir astronot, Mars’ta bitki yetiştirmek için bir sera sistemi geliştiriyor. Sera, farklı bitkilerin
+büyümesini sağlamak için belirli sıcaklık ve nem koşullarını korumak zorunda. Astronot, sistemin çalışmasını optimize
+etmek için sıcaklık ve nem verilerini analiz eden bir yazılım geliştiriyor. Sera içinde sıcaklık ve nem sensörleri var.
+Bazen bu sensörlerden biri bozulduğunda, yedek sensör devreye giriyor. Ancak yedek sensörün ölçtüğü sıcaklık (float)
+veya nem (int) farklı veri türünde olabiliyor. Bu yüzden iki sensör arasındaki veri takas ediliyor ve değerler uyumlu
+hale getiriliyor. Ayrıca astronot, sera içindeki toprağın uzunluk ve genişlik ölçülerini girerek ekim yapılacak
+alanı hesaplıyor.
+```
+
+## Proje Yapısı
+- Varyant 3 kodları `GreenhouseArea.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── variables/    
+│        └── FoodBag.kt
+│        └── AverageWaterConsumption.kt
+│        └── GreenhouseArea.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Starting values:
+Temperature: 23.4, Humidity: 45
+--------------------------------------------------
+Post-Exchange Values:
+Temperature: 45.0, Humidity: 45
+--------------------------------------------------
+Enter the greenhouse length (meters): 10
+Enter greenhouse width (meters): 8
+--------------------------------------------------
+Greenhouse area length: 10.0 meters
+Greenhouse area width: 8.0 meters
+Greenhouse area: 80.0 square meters
 --------------------------------------------------
 ```
 

@@ -12,9 +12,11 @@ fun calculateAverageWaterConsumption() {
     /* Biz senaryomuzu yukarıda istenilen varyanta uyarladık elde edeceğimiz çıktılar varyantın
     bizim ulaşmamızı istediği çıktılarla uyuşucaktır. */
 
-    /* Öncelikle kullanıcıdan istenilen verileri hatasız girdiği düşünülerek işlemler kodlanmıştır.
-    Amaç işlemlerin temel düzeyde nasıl yapıldığını kavramaktır. Daha sonra kontrol işlemleri için
-    gerekli terimleri de öğrendiğimizde işlemler geliştirilebilir. */
+    /* Şimdilik kullanıcıdan sayısal değerler istediğimiz alanlarda sayısal değerelr dışında girişler
+    yaptığında hata almamak için '.toDoubleOrNull() ?: 0.0' ifadesi kullanılıyor yani girilen değer
+    null ya da double değer değilse girilen değer '0.0' olarak alınsın. Amaç işlemlerin temel düzeyde
+    nasıl yapıldığını kavramaktır. Daha sonra kontrol işlemleri için gerekli terimleri de öğrendiğimizde
+    işlemler geliştirilebilir. */
 
     println("-".repeat(50))
 
@@ -25,7 +27,7 @@ fun calculateAverageWaterConsumption() {
 
     // readln() fonksiyonu, kullanıcıdan bir giriş alır. Kullanıcının girdiği yaşı memberAge değişkenine atanır.
     print("Crew Member Age: ")
-    val memberAge = readln()
+    val memberAge = readln().toDoubleOrNull() ?: 0.0
 
     println("-".repeat(50))
 
@@ -35,11 +37,11 @@ fun calculateAverageWaterConsumption() {
 
     // readln() fonksiyonu, kullanıcıdan bir giriş alır. Alınan girişi '.toFloat()' float'a çevirir ve değişkene atanır.
     print("Crew Member First Day: ")
-    val firstDay = readln().toFloat()
+    val firstDay = readln().toDoubleOrNull() ?: 0.0
     print("Crew Member Second Day: ")
-    val secondDay = readln().toFloat()
+    val secondDay = readln().toDoubleOrNull() ?: 0.0
     print("Crew Member Third Day: ")
-    val thirdDay = readln().toFloat()
+    val thirdDay = readln().toDoubleOrNull() ?: 0.0
 
     println("-".repeat(50))
 
