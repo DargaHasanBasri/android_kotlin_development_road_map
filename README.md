@@ -129,7 +129,7 @@ alanı hesaplıyor.
 ```
 
 ## Proje Yapısı
-- Varyant 3 kodları `GreenhouseArea.kt` dosyası içerisindedir.
+- Varyant 4 ve 5 kodları `GreenhouseArea.kt` dosyası içerisindedir.
 ```plaintext
 src/
 └── beginner_level/
@@ -159,6 +159,52 @@ Enter greenhouse width (meters): 8
 Greenhouse area length: 10.0 meters
 Greenhouse area width: 8.0 meters
 Greenhouse area: 80.0 square meters
+--------------------------------------------------
+```
+
+## Varyant 6:
+- Kullanıcıdan alınan sıcaklık bilgisine göre Celcius'tan Fahrenheit'e ve Fahrenheit'ten Celcius'a dönüşüm yapan bir program geliştirin.
+
+### Senaryo
+- Varyant 6 için senaryo:
+```plaintext
+Bir astronot, Mars'taki sera sisteminin sıcaklık dönüşümlerini kolaylaştırmak için bir yazılım geliştirmeye
+karar veriyor. Sera sisteminde sıcaklık ölçümleri genellikle Celcius cinsinden yapılıyor. Ancak, bazı durumlarda
+Fahrenheit biriminde veri sağlayan cihazlar da kullanılıyor. Astronot, sıcaklık verilerini ihtiyaç duyulan birime
+dönüştürmek için bir yazılıma ihtiyaç duyuyor. Bu yazılım, kullanıcıdan alınan Celcius sıcaklık bilgisine göre
+Fahrenheit'e ve ya kullanıcıdan alınan Fahrenheit sıcaklık bilgisine göre Celcius'a dönüşüm yaparak, sera sisteminin
+doğru şekilde çalışmasını sağlıyor.
+```
+
+## Proje Yapısı
+- Varyant 6 kodları `AirTemperature.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── variables/    
+│        └── FoodBag.kt
+│        └── AverageWaterConsumption.kt
+│        └── GreenhouseArea.kt
+│        └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Please enter the temperature value in Celsius: 20
+--------------------------------------------------
+Please enter the temperature value in Fahrenheit: 5
+--------------------------------------------------
+Celsius entered: 20.0 
+Celsius to Fahrenheit: 68.0 
+--------------------------------------------------
+Fahrenheit entered: 5.0
+Fahrenheit to Celsius: -15.0
 --------------------------------------------------
 ```
 
