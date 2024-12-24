@@ -388,4 +388,70 @@ The temperature is stabilizing...
 ---------------------------------------------------
 ```
 
+## Varyant 5:
+- Döngülerde `val` anahtar kelimesinin davranışını inceleyin ve bunun değişken yeniden atanmasını nasıl etkilediğini gösterin.
 
+## Senaryo
+- Varyant 4 için senaryo:
+```plaintext
+Astronotlar, Mars üsleri arasında taşınacak malzemeleri yönetmek için bir kargo sistemi geliştiriyor. Bu sistemde,
+kargonun her bir birimi işlenirken değişmeyen bilgiler (örneğin, kargo numarası veya türü) ve değişebilen
+bilgiler (örneğin, kalan ağırlık) ile çalışılıyor. Astronotlar, döngü kullanarak her bir kargo biriminin durumunu
+kontrol ediyor. val anahtar kelimesi, bir döngüde sabit kalan değerleri temsil etmek için kullanılıyor, ancak değişken
+değerler için var tercih ediliyor.
+```
+
+## Proje Yapısı
+- Varyant 5 kodları `SpaceCargoManagement.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Cargo Processing Begins...
+--------------------------------------------------
+KargoID-01 cargo is being processed...
+  100 kg processed, remaining: 400 kg
+  100 kg processed, remaining: 300 kg
+  100 kg processed, remaining: 200 kg
+  100 kg processed, remaining: 100 kg
+  100 kg processed, remaining: 0 kg
+KargoID-01 completed!
+--------------------------------------------------
+KargoID-02 cargo is being processed...
+  100 kg processed, remaining: 600 kg
+  100 kg processed, remaining: 500 kg
+  100 kg processed, remaining: 400 kg
+  100 kg processed, remaining: 300 kg
+  100 kg processed, remaining: 200 kg
+  100 kg processed, remaining: 100 kg
+  100 kg processed, remaining: 0 kg
+KargoID-02 completed!
+--------------------------------------------------
+KargoID-03 cargo is being processed...
+  100 kg processed, remaining: 200 kg
+  100 kg processed, remaining: 100 kg
+  100 kg processed, remaining: 0 kg
+KargoID-03 completed!
+--------------------------------------------------
+All shipments have been processed.
+--------------------------------------------------
+```

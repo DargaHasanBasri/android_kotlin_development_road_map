@@ -5,6 +5,7 @@ import beginner_level.variables.calculateAirTemperature
 import beginner_level.keywords.NightDaytimeReport
 import beginner_level.keywords.MarsBaseInventory
 import beginner_level.keywords.MarsBaseThermalManagement
+import beginner_level.keywords.spaceCargoManagement
 
 fun main() {
     // println("Variables Content:")
@@ -33,4 +34,6 @@ fun main() {
     marsHeatSystem.checkTemperature(currentTemperature = 35, optimalTemperature = 25)
     println("-".repeat(50))
    */
+
+    spaceCargoManagement()
 }
