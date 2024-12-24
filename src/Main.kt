@@ -4,6 +4,7 @@ import beginner_level.variables.calculateGreenhouseArea
 import beginner_level.variables.calculateAirTemperature
 import beginner_level.keywords.NightDaytimeReport
 import beginner_level.keywords.MarsBaseInventory
+import beginner_level.keywords.MarsBaseThermalManagement
 
 fun main() {
     // println("Variables Content:")
@@ -12,7 +13,24 @@ fun main() {
     // calculateGreenhouseArea()
     // calculateAirTemperature()
 
-    // println("Keywords Content:")
+    // println("Keywords Content: var,val,lazy,lateinit")
     // NightDaytimeReport().createNightDaytimeReport()
-    MarsBaseInventory().checkBaseInventory()
+    // MarsBaseInventory().checkBaseInventory()
+
+    // println("Keywords Content: Lazy")
+    /*
+    val marsHeatSystem = MarsBaseThermalManagement()
+    println("-".repeat(50))
+    // İlk kontrol: Optimal sıcaklık.
+    marsHeatSystem.checkTemperature(currentTemperature = 25, optimalTemperature = 25)
+    println("-".repeat(50))
+    // İkinci kontrol: Dengeleyiciye ihtiyaç var.
+    // Dengeleyici ilk kez kullanılıyor ve ilk kez oluşturuluyor.
+    marsHeatSystem.checkTemperature(currentTemperature = 30, optimalTemperature = 25)
+    println("-".repeat(50))
+    // Üçüncü kontrol: Dengeleyici tekrar kullanılıyor, ancak yeniden başlatılmıyor.
+    // Dengeleyici ikinci kez kullanılıyor ve dengeleyici tekrardan oluşturulmuyor ilk oluşturulan kullanılıyor.
+    marsHeatSystem.checkTemperature(currentTemperature = 35, optimalTemperature = 25)
+    println("-".repeat(50))
+   */
 }

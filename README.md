@@ -211,7 +211,7 @@ Fahrenheit to Celsius: -15.0
 ## Anahtar Kelimeler (Keywords)
 
 ### Varyant 1:
-- var, val, lateinit ve lazy anahtar kelimeleri kullanılarak değişkenler tanımlayın ve davranışlarını gözlemleyin.
+- `var`, `val`, `lateinit` ve `lazy` anahtar kelimeleri kullanılarak değişkenler tanımlayın ve davranışlarını gözlemleyin.
 
 ## Senaryo
 - Varyant 1 için senaryo:
@@ -266,10 +266,10 @@ Daytime temperature: 25.0, Night temperature: -65.0
 
 
 ## Varyant 2:
-- val ve var anahtar kelimeleri arasındaki değiştirilebilirlik (mutability) ve başlangıç değeri gerekliliği (initialization) farklarını keşfedin.
+- `val` ve `var` anahtar kelimeleri arasındaki değiştirilebilirlik (mutability) ve başlangıç değeri gerekliliği (initialization) farklarını keşfedin.
 
 ## Varyant 3:
-- lateinit anahtar kelimesini kullanarak bir nullable değişken tanımlayın ve kodun ilerleyen bir bölümünde bu değişkeni başlatmayı deneyin.
+- `lateinit` anahtar kelimesini kullanarak bir nullable değişken tanımlayın ve kodun ilerleyen bir bölümünde bu değişkeni başlatmayı deneyin.
 
 ## Senaryo
 - Varyant 2 ve 3 için senaryo:
@@ -281,13 +281,13 @@ bilgiler (örneğin, kritik yedek parça listesi) hemen tanımlanmaz, ancak prog
 ```
 
 ## Proje Yapısı
-- Varyant 2 ve 3 kodları `MarsBasrInventory.kt` dosyası içerisindedir.
+- Varyant 2 ve 3 kodları `MarsBaseInventory.kt` dosyası içerisindedir.
 ```plaintext
 src/
 └── beginner_level/
 │    └── keywords/    
 │    │    └── NightDaytimeReport.kt
-│    │    └── MarsBasrInventory.kt
+│    │    └── MarsBaseInventory.kt
 │    │    
 │    │     
 │    └── variables/    
@@ -314,4 +314,78 @@ Number of Modules: 5
 Food Stock: 10
 --------------------------------------------------
 ```
+
+## Varyant 4:
+- `lazy` anahtar kelimesinin kullanımını araştırarak karmaşık bir nesneyi sadece ilk erişim sırasında başlatmayı gösterin.
+
+### Araştırma Sonucu:
+- `lazy` anahtar kelimesi, bir değişkenin ilk erişim sırasında başlatılmasını (initialize) sağlar. 
+lazy kullanımı, özellikle bir değişkenin başlatılmasının zaman alıcı bir işlem olduğu durumlarda, performans iyileştirmesi yapmak için idealdir. 
+Bu, nesneyi sadece ihtiyaç duyulduğunda oluşturur ve sonraki erişimlerde aynı değeri döner (yani, lazy değişkenler thread-safe olarak çalışır).
+- `Lazy` Nasıl Çalışır?
+  - lazy ile tanımlanan bir değişken, yalnızca ilk erişildiğinde başlatılır.
+  - İlk başlatmadan sonra, aynı nesne tekrar kullanılmaya devam eder (tek bir kez başlatılır).
+  - lazy anahtar kelimesi bir lambda ifadesi alır ve bu ifade, değişkenin değerini hesaplar.
+
+### Temel Yapı:
+```plaintext
+val variableName: variableType by lazy {
+    // The value is returned here
+}
+```
+
+### `Lazy` Kullanımının Faydaları:
+- `Performans`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Karmaşık veya büyük bir nesneyi ihtiyaç duyulmadıkça oluşturmaz, belleği ve işlem gücünü optimize eder.
+- `Thread-Safety`&nbsp;: Varsayılan olarak thread-safe çalışır, ancak thread-safety gerekmezse lazy(LazyThreadSafetyMode.NONE) ile performans artırılabilir.
+- `Geç Başlatma`&nbsp;&nbsp; : Değişkenin program başında değil, sadece ihtiyaç duyulduğunda oluşturulmasını sağlar.
+
+
+## Senaryo
+- Varyant 4 için senaryo:
+```plaintext
+Astronot, Mars üssünde ısı yönetimi için karmaşık bir ısı dengeleyici algoritmayı yalnızca ihtiyaç
+duyulduğunda başlatmak istiyor. Bu algoritma, enerji tasarrufu amacıyla sürekli olarak çalıştırılmıyor ve
+sadece sistemin ısı dengesizliği yaşadığı durumlarda devreye giriyor.
+```
+
+## Proje Yapısı
+- Varyant 4 kodları `MarsBaseThermalManagement.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    
+│    │     
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Current Temperature: 25, Optimal Temperature: 25
+The temperature is optimal, there is no need for a stabilizer.
+--------------------------------------------------
+Current Temperature: 30, Optimal Temperature: 25
+Temperature difference detected! The stabilizer is activated.
+Initializing the heat balancer algorithm...
+The temperature is stabilizing...
+--------------------------------------------------
+Current Temperature: 35, Optimal Temperature: 25
+Temperature difference detected! The stabilizer is activated.
+The temperature is stabilizing...
+---------------------------------------------------
+```
+
 
