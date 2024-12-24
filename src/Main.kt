@@ -6,6 +6,7 @@ import beginner_level.keywords.NightDaytimeReport
 import beginner_level.keywords.MarsBaseInventory
 import beginner_level.keywords.MarsBaseThermalManagement
 import beginner_level.keywords.spaceCargoManagement
+import beginner_level.control_flow_statements.calculateColonyEnergy
 
 fun main() {
     // println("Variables Content:")
@@ -35,5 +36,8 @@ fun main() {
     println("-".repeat(50))
    */
 
-    spaceCargoManagement()
+    // spaceCargoManagement()
+
+    // println("Control Flow Statements Content:")
+    calculateColonyEnergy()
 }

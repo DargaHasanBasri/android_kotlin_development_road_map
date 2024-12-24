@@ -264,7 +264,6 @@ Daytime temperature: 25.0, Night temperature: -65.0
 --------------------------------------------------
 ```
 
-
 ## Varyant 2:
 - `val` ve `var` anahtar kelimeleri arasındaki değiştirilebilirlik (mutability) ve başlangıç değeri gerekliliği (initialization) farklarını keşfedin.
 
@@ -453,5 +452,59 @@ KargoID-03 cargo is being processed...
 KargoID-03 completed!
 --------------------------------------------------
 All shipments have been processed.
+--------------------------------------------------
+```
+
+## Kontrol Akışı İfadeleri (Control Flow Statements)
+
+### Varyant 1:
+- `if` deyimini kullanarak bir sayının çift mi yoksa tek mi olduğunu kontrol eden bir program yazın.
+
+## Senaryo
+- Varyant 1 için senaryo:
+```plaintext
+Mars kolonisine enerji sağlayan bir güneş paneli sistemi bulunmaktadır. Bu sistem, her bir güneş panelinin
+ürettiği enerji birimlerini takip eder. Astronotlar, enerji üretim raporlarını düzenlerken, çift enerji birimlerinin
+daha istikrarlı enerji üretimini temsil ettiğini fark eder. Bu nedenle, her bir güneş panelinden alınan enerji
+birimlerinin çift mi yoksa tek mi olduğunu kontrol etmek ve raporlamak için bir yazılım geliştirirler.
+```
+
+## Proje Yapısı
+- Varyant 1 kodları `ColonyEnergyManagement.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │         
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Mars Colony Energy Production Report:
+--------------------------------------------------
+Energy Unit: 120 -> Even (Balanced production)
+Energy Unit: 75 -> Odd (Requires attention)
+Energy Unit: 200 -> Even (Balanced production)
+Energy Unit: 45 -> Odd (Requires attention)
+Energy Unit: 130 -> Even (Balanced production)
+--------------------------------------------------
+Energy report completed.
 --------------------------------------------------
 ```
