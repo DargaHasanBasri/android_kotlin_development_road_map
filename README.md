@@ -9,7 +9,7 @@
 #### Varyant 2:
 - Tam sayı (`Int`) ve ondalıklı sayı (`Float`) değişkenlerinde aritmetik işlemler gerçekleştirin ve sonuçları yazdırın.
 
-### Senaryo
+## Senaryo
 - Varyant 1 ve Varyant 2 için senaryo:
 ```plaintext
 Bir astronot, Mars'ta bir keşif görevindedir. Görev sırasında bir "gıda çantası"
@@ -67,7 +67,7 @@ Total Calories Required: 1029.1
 ## Varyant 3:
 - Kullanıcıdan isim, yaş ve not ortalaması bilgilerini alan ve bu bilgileri ekranda gösteren bir program oluşturun.
 
-### Senaryo
+## Senaryo
 - Varyant 3 için senaryo:
 ```plaintext
 Bir uzay mürettebatı, Mars’taki görev sırasında 3 günlük su tüketimlerini takip etmek için
@@ -116,7 +116,7 @@ Average Water Consumption : 3.6666667
 ## Varyant 5:
 - Uzunluk ve genişlik bilgilerini kullanıcıdan alarak bir dikdörtgenin alanını hesaplayan bir program yazın.
 
-### Senaryo
+## Senaryo
 - Varyant 4 ve 5 için senaryo:
 ```plaintext
 Bir astronot, Mars’ta bitki yetiştirmek için bir sera sistemi geliştiriyor. Sera, farklı bitkilerin
@@ -165,7 +165,7 @@ Greenhouse area: 80.0 square meters
 ## Varyant 6:
 - Kullanıcıdan alınan sıcaklık bilgisine göre Celcius'tan Fahrenheit'e ve Fahrenheit'ten Celcius'a dönüşüm yapan bir program geliştirin.
 
-### Senaryo
+## Senaryo
 - Varyant 6 için senaryo:
 ```plaintext
 Bir astronot, Mars'taki sera sisteminin sıcaklık dönüşümlerini kolaylaştırmak için bir yazılım geliştirmeye
@@ -261,6 +261,57 @@ Daytime temperature: 25.0, Night temperature: -65.0
 --------------------------------------------------
 report lazy block Called for the second time
 Daytime temperature: 25.0, Night temperature: -65.0
+--------------------------------------------------
+```
+
+
+## Varyant 2:
+- val ve var anahtar kelimeleri arasındaki değiştirilebilirlik (mutability) ve başlangıç değeri gerekliliği (initialization) farklarını keşfedin.
+
+## Varyant 3:
+- lateinit anahtar kelimesini kullanarak bir nullable değişken tanımlayın ve kodun ilerleyen bir bölümünde bu değişkeni başlatmayı deneyin.
+
+## Senaryo
+- Varyant 2 ve 3 için senaryo:
+```plaintext
+Bir astronot, Mars üssünde bulunan malzemelerin envanterini yönetmek için bir yazılım geliştirmek istiyor.
+Yazılım, farklı türdeki malzemelerin miktarlarını takip edecek. Malzemelerin bazıları sürekli olarak değiştirilebilir
+(örneğin, yiyecek stoğu), bazıları ise sabit bir kez tanımlanıp değiştirilemez (örneğin, modül sayısı). Ayrıca, bazı
+bilgiler (örneğin, kritik yedek parça listesi) hemen tanımlanmaz, ancak programın ilerleyen bölümlerinde atanır.
+```
+
+## Proje Yapısı
+- Varyant 2 ve 3 kodları `MarsBasrInventory.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBasrInventory.kt
+│    │    
+│    │     
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Food stock updated: 10
+--------------------------------------------------
+Critical spare parts identified: Front Engines
+--------------------------------------------------
+Mars Base Inventory:
+Number of Modules: 5
+Food Stock: 10
 --------------------------------------------------
 ```
 
