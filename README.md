@@ -208,3 +208,59 @@ Fahrenheit to Celsius: -15.0
 --------------------------------------------------
 ```
 
+## Anahtar Kelimeler (Keywords)
+
+### Varyant 1:
+- var, val, lateinit ve lazy anahtar kelimeleri kullanılarak değişkenler tanımlayın ve davranışlarını gözlemleyin.
+
+## Senaryo
+- Varyant 1 için senaryo:
+```plaintext
+Mars’taki bir robotik keşif aracı, gece ve gündüz sıcaklıklarını ölçmekte ve bir rapor oluşturmakta.
+Gündüz sıcaklığı sürekli değiştiği için 'var' ile tanımlanır. Gece sıcaklığı genelde sabit bir değerdedir, bu nedenle
+'val' kullanılır. Ayrıca aracın enerji kaynağı durumu, ilerleyen süreçte güncelleneceği için lateinit ile tanımlanır.
+Rapor oluşturma işlemi sık kullanılmadığı için, rapor verileri lazy ile gecikmeli olarak yüklenir.
+```
+
+## Proje Yapısı
+- Varyant 1 kodları `NightDaytimeReport.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    
+│    │    
+│    │     
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Energy source has not been initialized yet.
+Energy Source: Solar Panels
+--------------------------------------------------
+Daytime temperature: 20.5 °C
+Updated daytime temperature: 25.0 °C
+--------------------------------------------------
+Night temperature: -65.0 °C
+--------------------------------------------------
+report lazy block Called for the first time
+The report is being prepared...
+Daytime temperature: 25.0, Night temperature: -65.0
+--------------------------------------------------
+report lazy block Called for the second time
+Daytime temperature: 25.0, Night temperature: -65.0
+--------------------------------------------------
+```
+
