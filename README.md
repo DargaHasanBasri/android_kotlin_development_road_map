@@ -391,7 +391,7 @@ The temperature is stabilizing...
 - Döngülerde `val` anahtar kelimesinin davranışını inceleyin ve bunun değişken yeniden atanmasını nasıl etkilediğini gösterin.
 
 ## Senaryo
-- Varyant 4 için senaryo:
+- Varyant 5 için senaryo:
 ```plaintext
 Astronotlar, Mars üsleri arasında taşınacak malzemeleri yönetmek için bir kargo sistemi geliştiriyor. Bu sistemde,
 kargonun her bir birimi işlenirken değişmeyen bilgiler (örneğin, kargo numarası veya türü) ve değişebilen
@@ -506,5 +506,109 @@ Energy Unit: 45 -> Odd (Requires attention)
 Energy Unit: 130 -> Even (Balanced production)
 --------------------------------------------------
 Energy report completed.
+--------------------------------------------------
+```
+
+## Varyant 2:
+- Aritmetik işlemleri gerçekleştiren basit bir hesap makinesi programını Kotlin'in `when` (switch'e eşdeğer) ifadesini kullanarak oluşturun.
+
+### Araştırma Sonucu:
+1. `when` İfadesi:
+   - Anlamı: `switch-case` ifadesine benzer şekilde çalışır ve belirli bir duruma bağlı olarak kod parçalarını çalıştırır. Farkı, daha esnek ve güçlü olmasıdır.
+   - Kullanım: Birden fazla durumu kontrol etmek veya bir değişkenin değerine bağlı işlem yapmak için kullanılır.
+
+2. `->` Operatörü İfadesi:
+   - Anlamı: `when` içinde bir duruma karşılık gelen kodu tanımlamak için kullanılır. Sol tarafta kontrol edilen değer, sağ tarafta ise bu değerle eşleştiğinde yapılacak işlem bulunur.
+   - Kullanım: `when` ifadelerinde durum eşleştirme yaparken sonuç veya işlem belirtmek için kullanılır.
+   
+3. `if` ve `else` İfadesi:
+   - Anlamı: Belirli bir koşulu kontrol eder ve bu koşula bağlı olarak işlem gerçekleştirir. `else` kısmı, hiçbir koşul sağlanmazsa çalışır.
+   - Kullanım: `when` içinde daha detaylı kontrol yapmanız gerektiğinde kullanılır.
+ 
+4. `null` İfadesi:
+   - Anlamı: Boş değeri ifade eder. Kotlin'de bir değişkenin değeri olmayabileceğini belirtmek için kullanılır.
+   - Kullanım: Hatalı bir durum veya geçersiz işlemle karşılaşıldığında `null` döndürmek, hatalı sonuç yerine işlemin başarısız olduğunu belirtir.  
+
+### Temel Yapı:
+1. `when`:
+    ```plaintext
+    val result = when (value) {
+        "A" -> "Case A"       // Eğer value "A" ise, bu çalışır.
+        "B" -> "Case B"      // Eğer value "B" ise, bu çalışır.
+        else -> "Unknown"   // Eğer hiçbir durum eşleşmezse, bu çalışır.
+    }
+    ```
+2. `->`:
+   ```plaintext
+   val result = when (number) {
+       1 -> "One"          // Eğer number 1 ise, "One" döner.
+       2 -> "Two"         // Eğer number 2 ise, "Two" döner.
+       else -> "Other"   // Diğer durumlarda "Other" döner.
+   }
+   ```
+3. `if` ve `else`:
+   ```plaintext
+    val result = when {
+        value > 10 -> "Greater than 10"  // Eğer value 10'dan büyükse, bu çalışır.
+        value < 10 -> "Less than 10"    // Eğer value 10'dan küçükse, bu çalışır.
+        else -> "Equal to 10"          // Diğer durumlarda bu çalışır.
+    }
+   ```
+
+4. `null`:
+   ```plaintext
+    else -> { 
+        println("Invalid operation: Please enter one of +, -, *, /") 
+        null // Tanınmayan işlem, null döner.
+    }
+   ```
+
+
+## Senaryo
+- Varyant 2 için senaryo:
+```plaintext
+Mars keşif ekibi, üslerinde enerji tüketimini ve üretimini optimize etmek için bir hesap makinesi
+kullanmaya karar verdi. Bu hesap makinesi, keşif araçlarının enerji tüketimi, üslerin enerji üretimi, enerji
+aktarımı ve enerji kayıpları gibi temel işlemleri hesaplayabiliyor. Basit aritmetik işlemleri gerçekleştiren
+bu hesaplayıcıyı geliştirin.
+```
+
+## Proje Yapısı
+- Varyant 2 kodları `BaseEnergyCalculator.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │         
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Welcome to the Mars Energy Calculator!
+--------------------------------------------------
+Enter the first energy value: 10
+Enter the second energy value: 14
+--------------------------------------------------
+Enter the transaction operator (+, -, *, /): +
+--------------------------------------------------
+Result of 10.0 + 14.0 = 24.0
 --------------------------------------------------
 ```
