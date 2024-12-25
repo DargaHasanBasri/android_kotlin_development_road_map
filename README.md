@@ -612,3 +612,83 @@ Enter the transaction operator (+, -, *, /): +
 Result of 10.0 + 14.0 = 24.0
 --------------------------------------------------
 ```
+
+## Varyant 3:
+- Sınav puanına göre bir öğrencinin notunu belirleyen bir programı iç içe geçmiş `if-else` ifadeleri kullanarak yazın.
+
+### Araştırma Sonucu:
+1. `if - else if - else` İfadesi:
+    - Anlamı: `if - else if - else`, belirli bir koşulun doğru olup olmadığını kontrol ederek buna bağlı olarak farklı kod bloklarını çalıştırmayı sağlar.
+   
+### Temel Yapı:
+- `if - else if - else`:
+```plaintext
+if (condition1) {
+
+        // Koşul doğruysa bu blok çalışır
+   
+    } else if (condition2) {
+   
+        // Koşul doğruysa bu blok çalışır
+   
+    } else {
+   
+        // Koşul yanlışsa bu blok çalışır
+   
+    }  
+```
+
+## Senaryo
+- Varyant 2 için senaryo:
+```plaintext
+Mars'taki koloni, enerji kaynaklarını etkili bir şekilde yönetebilmek için belirli testler yapmaktadır.
+Bu testlerde enerji kaynaklarının performans puanları hesaplanır ve bu puanlara göre kaynakların durumu
+değerlendirilir. Performans puanı 100 üzerinden değerlendirilir ve her kaynak bir yeterlilik derecesi alır.
+Enerji kaynaklarının yeterlilik durumlarını belirlemek ve hangi kaynağın geliştirilmesi gerektiğini analiz etmek.
+Bu dereceler, enerji kaynağı için belirli aksiyonların alınmasını sağlar.
+Yeterlilik Dereceleri:
+90 ve üzeri: A (Mükemmel Verimlilik)
+80-89: B (Yüksek Verimlilik)
+70-79: C (Orta Verimlilik)
+60-69: D (Düşük Verimlilik)
+60'ın altı: F (Yetersiz Verimlilik)
+```
+
+## Proje Yapısı
+- Varyant 2 kodları `EnergySufficiencyTest.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │         
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Evaluating Energy Source Performance...
+--------------------------------------------------
+Enter today's performance metric: 80
+--------------------------------------------------
+Energy Source Score: 80.0 -> Grade: B
+Feedback: High Efficiency. Suitable for most operations.
+--------------------------------------------------
+```
