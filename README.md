@@ -758,3 +758,68 @@ Mars Year: 2032
 Maintenance Status Message: Leap Year on Mars No maintenance required. Systems are operating at peak efficiency.
 --------------------------------------------------
 ```
+
+## Varyant 5:
+-  `when` ifadesini kullanarak basit bir trafik ışığı sistemi simüle eden bir program geliştirin.
+
+## Senaryo
+- Varyant 5 için senaryo:
+```plaintext
+Mars kolonisindeki astronotlar, yer altı tünelleri ve yüzey araçlarını güvenle koordine etmek için
+bir trafik ışığı sistemi geliştirmiştir. Bu sistem, ışık renklerine göre astronotların ne yapması gerektiğini
+belirler. When ifadesi kullanılarak bu ışık sistemi simüle edilecektir.
+Trafik ışığı kuralları:
+Yeşil ışık: Araçlar serbestçe hareket edebilir.
+Sarı ışık: Araçlar dikkatli olmalı ve güvenli alandan uzaklaşmamalı.
+Kırmızı ışık: Araçlar güvenli alanda toplanmalı.
+Bilinmeyen ışık: Arızalı sistem, yardım talep edilecektir.
+```
+
+## Proje Yapısı
+- Varyant 5 kodları `MarsTrafficManagement.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt
+│    │         
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Mars Traffic Signal: Green
+Action: Alert faulty system, request assistance
+--------------------------------------------------
+--------------------------------------------------
+Mars Traffic Signal: Yellow
+Action: Alert faulty system, request assistance
+--------------------------------------------------
+--------------------------------------------------
+Mars Traffic Signal: Red
+Action: Alert faulty system, request assistance
+--------------------------------------------------
+--------------------------------------------------
+Mars Traffic Signal: Blue
+Action: Alert faulty system, request assistance
+--------------------------------------------------
+```
