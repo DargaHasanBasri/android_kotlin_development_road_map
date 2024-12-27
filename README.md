@@ -889,3 +889,66 @@ Total Data Collected: 1720 MB
 Data Storage Limit Status: Data collection is within the storage limit.
 --------------------------------------------------
 ```
+
+## Varyant 3:
+-  Şehir isimlerini içeren bir string dizisi oluşturun ve kullanıcıdan alınan bir şehri dizide arayın.
+
+## Senaryo
+- Varyant 3 için senaryo:
+```plaintext
+Mars'ta bulunan koloniler ve araştırma bölgelerinin isimleri bir dizide tutulmaktadır. Görev kontrol ekibi,
+bir astronotun belirttiği koloni bölgesini arayarak o bölgenin durumunu sorgulamak istemektedir. Eğer belirtilen bölge
+dizide mevcutsa, ekibin kontrol sistemine "Koloni bölgesi aktif ve incelenebilir." mesajı gönderilir. Eğer belirtilen
+bölge mevcut değilse, "Koloni bölgesi bulunamadı. Haritayı kontrol edin." mesajı ile astronota bilgi verilir.
+```
+
+## Proje Yapısı
+- Varyant 3 kodları `ColonyAreasStatus.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── arrays/    
+│    │    └── DailyDataCapacity.kt
+│    │    └── ColonyAreasStatus.kt   
+│    │         
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt     
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Enter the name of the colony zone you are searching for: test
+--------------------------------------------------
+Mars Colony: test
+Status: Colony zone not found. Check the map for accurate location.
+--------------------------------------------------
+
+OR
+
+--------------------------------------------------
+Enter the name of the colony zone you are searching for: Gale Crater
+--------------------------------------------------
+Mars Colony: Gale Crater
+Status: Colony zone is active and ready for exploration.
+--------------------------------------------------
+```

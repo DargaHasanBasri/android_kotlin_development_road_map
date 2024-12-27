@@ -12,6 +12,7 @@ import beginner_level.control_flow_statements.calculateEfficiencyPerformance
 import beginner_level.control_flow_statements.calculateMaintenanceCalendar
 import beginner_level.control_flow_statements.MarsTrafficManagement
 import beginner_level.arrays.dailyDataCapacity
+import beginner_level.arrays.searchMarsColony
 
 fun main() {
     // println("Variables Content:")
@@ -50,5 +51,7 @@ fun main() {
     // calculateMaintenanceCalendar()
     // MarsTrafficManagement().marsTrafficLightSimulation()
 
-    dailyDataCapacity()
+    // println("Arrays Content:")
+    // dailyDataCapacity()
+    // searchMarsColony()
 }
