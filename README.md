@@ -952,3 +952,61 @@ Mars Colony: Gale Crater
 Status: Colony zone is active and ready for exploration.
 --------------------------------------------------
 ```
+
+## Varyant 4:
+-  Bir tamsayı dizisindeki en büyük ve en küçük öğeleri bulan bir program yazın.
+
+## Varyant 5:
+-  Ondalıklı (float) bir dizideki tüm öğelerin ortalamasını hesaplayan bir program geliştirin.
+
+## Senaryo
+- Varyant 4 ve 5 için senaryo:
+```plaintext
+Mars'taki kolonilerden gelen veri paketleri, görev başarı oranları ve hava basıncı ölçümlerini içermektedir.
+Görev kontrol ekibi, en yüksek ve en düşük görev başarı oranlarını belirleyerek kolonilerin performansını değerlendirir.
+Ayrıca, hava basıncı ölçümlerinin ortalamasını hesaplayarak kolonilerdeki atmosferik koşulların stabil olup olmadığını
+analiz eder. Bu veriler, kolonilerin genel durumunu izlemek ve günlük operasyonları optimize etmek için kullanılır.
+```
+
+## Proje Yapısı
+- Varyant 4 ve 5 kodları `MarsEnvironmentalAnalysis.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── arrays/    
+│    │    └── DailyDataCapacity.kt
+│    │    └── ColonyAreasStatus.kt   
+│    │    └── MarsEnvironmentalAnalysis.kt       
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt     
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Highest mission success rate: 95
+Lowest mission success rate: 70
+--------------------------------------------------
+Average air pressure method1: 1012,88
+Average air pressure method2: 1012,88
+--------------------------------------------------
+```
