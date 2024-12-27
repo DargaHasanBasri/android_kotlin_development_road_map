@@ -9,6 +9,7 @@ import beginner_level.keywords.spaceCargoManagement
 import beginner_level.control_flow_statements.calculateColonyEnergy
 import beginner_level.control_flow_statements.baseEnergyCalculator
 import beginner_level.control_flow_statements.calculateEfficiencyPerformance
+import beginner_level.control_flow_statements.calculateMaintenanceCalendar
 
 fun main() {
     // println("Variables Content:")
@@ -44,4 +45,5 @@ fun main() {
     // calculateColonyEnergy()
     // baseEnergyCalculator()
     // calculateEfficiencyPerformance()
+    calculateMaintenanceCalendar()
 }

@@ -639,7 +639,7 @@ if (condition1) {
 ```
 
 ## Senaryo
-- Varyant 2 için senaryo:
+- Varyant 3 için senaryo:
 ```plaintext
 Mars'taki koloni, enerji kaynaklarını etkili bir şekilde yönetebilmek için belirli testler yapmaktadır.
 Bu testlerde enerji kaynaklarının performans puanları hesaplanır ve bu puanlara göre kaynakların durumu
@@ -655,7 +655,7 @@ Yeterlilik Dereceleri:
 ```
 
 ## Proje Yapısı
-- Varyant 2 kodları `EnergySufficiencyTest.kt` dosyası içerisindedir.
+- Varyant 3 kodları `EnergySufficiencyTest.kt` dosyası içerisindedir.
 ```plaintext
 src/
 └── beginner_level/
@@ -690,5 +690,71 @@ Enter today's performance metric: 80
 --------------------------------------------------
 Energy Source Score: 80.0 -> Grade: B
 Feedback: High Efficiency. Suitable for most operations.
+--------------------------------------------------
+```
+
+## Varyant 4:
+-  `if-else` deyimini kullanarak bir yılın artık yıl olup olmadığını kontrol eden bir program oluşturun.
+
+## Senaryo
+- Varyant 4 için senaryo:
+```plaintext
+Mars üssündeki astronot mürettebatı, enerji üretim ekipmanlarının bakımını belirli yıllarda
+gerçekleştiriyor. Ancak bakım planları, Mars yılı takvimine bağlı olarak değişiyor. Mars yılı takvimi Dünya'nın
+artık yıl hesaplama sistemi ile paralel bir mantık izler:
+Artık yıllarda bakım yapılmaz çünkü bu yıllar enerji üretiminin zirve yaptığı yıllardır.
+Artık yıl olmayan yıllarda bakım gereklidir çünkü bu yıllar boyunca enerji üretim kapasitesini en üst düzeyde tutmak
+için düzenli kontrol yapılması gerekir.
+Astronotlar, ekipman bakım döngülerini optimize ederek kritik görevlerde daha fazla zaman kazanmayı hedefliyor.
+```
+
+## Proje Yapısı
+- Varyant 4 kodları `EquipmentMaintenanceSchedule.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │         
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Welcome to the Maintenance Year Check...
+--------------------------------------------------
+Enter the Mars year to check maintenance schedule: 2026
+--------------------------------------------------
+Mars Year: 2026
+Maintenance Status Message: Regular Year on Mars Maintenance required to ensure optimal performance.
+--------------------------------------------------
+
+OR
+
+--------------------------------------------------
+Welcome to the Maintenance Year Check...
+--------------------------------------------------
+Enter the Mars year to check maintenance schedule: 2032
+--------------------------------------------------
+Mars Year: 2032
+Maintenance Status Message: Leap Year on Mars No maintenance required. Systems are operating at peak efficiency.
 --------------------------------------------------
 ```
