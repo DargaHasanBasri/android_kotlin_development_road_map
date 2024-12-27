@@ -823,3 +823,69 @@ Mars Traffic Signal: Blue
 Action: Alert faulty system, request assistance
 --------------------------------------------------
 ```
+
+## Diziler (Arrays)
+
+### Varyant 1:
+- Bir tamsayı dizisi tanımlayın, değerlerle başlatın ve her bir öğeyi yazdırın.
+
+### Varyant 2:
+- Bir dizideki tüm öğelerin toplamını bulan bir program yazın.
+
+## Senaryo
+- Varyant 1 ve 2 için senaryo:
+```plaintext
+Mars üssünde yer alan bilimsel araçlar, günlük olarak belirli miktarda veri topluyor. Bu araçların her birinin
+topladığı verileri bir dizi kullanarak temsil ediyoruz. Program, her bir aracın topladığı veriyi yazdıracak ve tüm
+araçların toplam günlük veri kapasitesini hesaplayarak Mars üssünün günlük veri depolama limitini aşıp aşmadığını
+kontrol edecek.
+```
+
+## Proje Yapısı
+- Varyant 1 ve 2 kodları `DailyDataCapacity.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── arrays/    
+│    │    └── DailyDataCapacity.kt
+│    │    
+│    │         
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt     
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt    
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Mars Daily Data Collection:
+--------------------------------------------------
+Daily Data 1: 300 MB
+Daily Data 2: 450 MB
+Daily Data 3: 250 MB
+Daily Data 4: 400 MB
+Daily Data 5: 320 MB
+--------------------------------------------------
+Total Data Collected: 1720 MB
+--------------------------------------------------
+Data Storage Limit Status: Data collection is within the storage limit.
+--------------------------------------------------
+```

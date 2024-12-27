@@ -11,6 +11,7 @@ import beginner_level.control_flow_statements.baseEnergyCalculator
 import beginner_level.control_flow_statements.calculateEfficiencyPerformance
 import beginner_level.control_flow_statements.calculateMaintenanceCalendar
 import beginner_level.control_flow_statements.MarsTrafficManagement
+import beginner_level.arrays.dailyDataCapacity
 
 fun main() {
     // println("Variables Content:")
@@ -43,10 +44,11 @@ fun main() {
     // spaceCargoManagement()
 
     // println("Control Flow Statements Content:")
-    // calculateColonyEnergy()
+    // calculateColonyEnergy()w
     // baseEnergyCalculator()
     // calculateEfficiencyPerformance()
     // calculateMaintenanceCalendar()
+    // MarsTrafficManagement().marsTrafficLightSimulation()
 
-    MarsTrafficManagement().marsTrafficLightSimulation()
+    dailyDataCapacity()
 }
