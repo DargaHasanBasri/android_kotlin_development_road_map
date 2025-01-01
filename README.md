@@ -1,9 +1,9 @@
 # ANDROID (KOTLIN) ROAD MAP
 
-## Başlangıç Seviyesi (Beginner Level)
+# Başlangıç Seviyesi (Beginner Level)
 
-### Değişkenler (Variables)
-#### Varyant 1:
+# Değişkenler (Variables)
+## Varyant 1:
 - Farklı veri türlerinde (`String`, `Int`, `Float`) değişkenler tanımlayın, başlatın ve ardından bu değerleri yazdırın.
 
 #### Varyant 2:
@@ -62,7 +62,7 @@ Extra Calories Required for Return: 555.6
 Total Calories Required: 1029.1
 --------------------------------------------------
 ```
-
+---
 
 ## Varyant 3:
 - Kullanıcıdan isim, yaş ve not ortalaması bilgilerini alan ve bu bilgileri ekranda gösteren bir program oluşturun.
@@ -109,6 +109,8 @@ Total Water Consumption : 11.0
 Average Water Consumption : 3.6666667
 --------------------------------------------------
 ```
+
+---
 
 ## Varyant 4:
 - Farklı veri türlerinde (örneğin, int ve float) iki değişkenin değerlerini takas eden bir program oluşturun.
@@ -162,6 +164,8 @@ Greenhouse area: 80.0 square meters
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 6:
 - Kullanıcıdan alınan sıcaklık bilgisine göre Celcius'tan Fahrenheit'e ve Fahrenheit'ten Celcius'a dönüşüm yapan bir program geliştirin.
 
@@ -208,9 +212,11 @@ Fahrenheit to Celsius: -15.0
 --------------------------------------------------
 ```
 
-## Anahtar Kelimeler (Keywords)
+---
 
-### Varyant 1:
+# Anahtar Kelimeler (Keywords)
+
+## Varyant 1:
 - `var`, `val`, `lateinit` ve `lazy` anahtar kelimeleri kullanılarak değişkenler tanımlayın ve davranışlarını gözlemleyin.
 
 ## Senaryo
@@ -314,6 +320,8 @@ Food Stock: 10
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 4:
 - `lazy` anahtar kelimesinin kullanımını araştırarak karmaşık bir nesneyi sadece ilk erişim sırasında başlatmayı gösterin.
 
@@ -387,6 +395,8 @@ The temperature is stabilizing...
 ---------------------------------------------------
 ```
 
+---
+
 ## Varyant 5:
 - Döngülerde `val` anahtar kelimesinin davranışını inceleyin ve bunun değişken yeniden atanmasını nasıl etkilediğini gösterin.
 
@@ -455,18 +465,21 @@ All shipments have been processed.
 --------------------------------------------------
 ```
 
-## Kontrol Akışı İfadeleri (Control Flow Statements)
+---
 
-### Varyant 1:
+# Kontrol Akışı İfadeleri (Control Flow Statements)
+
+## Varyant 1:
 - `if` deyimini kullanarak bir sayının çift mi yoksa tek mi olduğunu kontrol eden bir program yazın.
 
 ## Senaryo
 - Varyant 1 için senaryo:
 ```plaintext
-Mars kolonisine enerji sağlayan bir güneş paneli sistemi bulunmaktadır. Bu sistem, her bir güneş panelinin
-ürettiği enerji birimlerini takip eder. Astronotlar, enerji üretim raporlarını düzenlerken, çift enerji birimlerinin
-daha istikrarlı enerji üretimini temsil ettiğini fark eder. Bu nedenle, her bir güneş panelinden alınan enerji
-birimlerinin çift mi yoksa tek mi olduğunu kontrol etmek ve raporlamak için bir yazılım geliştirirler.
+Mars kolonisine enerji sağlayan bir güneş paneli sistemi bulunmaktadır. Bu sistem, her bir 
+güneş panelinin ürettiği enerji birimlerini takip eder. Astronotlar, enerji üretim 
+raporlarını düzenlerken, çift enerji birimlerinin daha istikrarlı enerji üretimini temsil 
+ettiğini fark eder. Bu nedenle, her bir güneş panelinden alınan enerji birimlerinin çift mi 
+yoksa tek mi olduğunu kontrol etmek ve raporlamak için bir yazılım geliştirirler.
 ```
 
 ## Proje Yapısı
@@ -508,6 +521,8 @@ Energy Unit: 130 -> Even (Balanced production)
 Energy report completed.
 --------------------------------------------------
 ```
+
+---
 
 ## Varyant 2:
 - Aritmetik işlemleri gerçekleştiren basit bir hesap makinesi programını Kotlin'in `when` (switch'e eşdeğer) ifadesini kullanarak oluşturun.
@@ -567,10 +582,10 @@ Energy report completed.
 ## Senaryo
 - Varyant 2 için senaryo:
 ```plaintext
-Mars keşif ekibi, üslerinde enerji tüketimini ve üretimini optimize etmek için bir hesap makinesi
-kullanmaya karar verdi. Bu hesap makinesi, keşif araçlarının enerji tüketimi, üslerin enerji üretimi, enerji
-aktarımı ve enerji kayıpları gibi temel işlemleri hesaplayabiliyor. Basit aritmetik işlemleri gerçekleştiren
-bu hesaplayıcıyı geliştirin.
+Mars keşif ekibi, üslerinde enerji tüketimini ve üretimini optimize etmek için bir hesap 
+makinesi kullanmaya karar verdi. Bu hesap makinesi, keşif araçlarının enerji tüketimi, 
+üslerin enerji üretimi, enerji aktarımı ve enerji kayıpları gibi temel işlemleri 
+hesaplayabiliyor. Basit aritmetik işlemleri gerçekleştiren bu hesaplayıcıyı geliştirin.
 ```
 
 ## Proje Yapısı
@@ -613,6 +628,8 @@ Result of 10.0 + 14.0 = 24.0
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 3:
 - Sınav puanına göre bir öğrencinin notunu belirleyen bir programı iç içe geçmiş `if-else` ifadeleri kullanarak yazın.
 
@@ -641,11 +658,13 @@ if (condition1) {
 ## Senaryo
 - Varyant 3 için senaryo:
 ```plaintext
-Mars'taki koloni, enerji kaynaklarını etkili bir şekilde yönetebilmek için belirli testler yapmaktadır.
-Bu testlerde enerji kaynaklarının performans puanları hesaplanır ve bu puanlara göre kaynakların durumu
-değerlendirilir. Performans puanı 100 üzerinden değerlendirilir ve her kaynak bir yeterlilik derecesi alır.
-Enerji kaynaklarının yeterlilik durumlarını belirlemek ve hangi kaynağın geliştirilmesi gerektiğini analiz etmek.
-Bu dereceler, enerji kaynağı için belirli aksiyonların alınmasını sağlar.
+Mars'taki koloni, enerji kaynaklarını etkili bir şekilde yönetebilmek için belirli testler 
+yapmaktadır. Bu testlerde enerji kaynaklarının performans puanları hesaplanır ve bu puanlara 
+göre kaynakların durumu değerlendirilir. Performans puanı 100 üzerinden değerlendirilir ve 
+her kaynak bir yeterlilik derecesi alır. Enerji kaynaklarının yeterlilik durumlarını 
+belirlemek ve hangi kaynağın geliştirilmesi gerektiğini analiz etmek. Bu dereceler, enerji 
+kaynağı için belirli aksiyonların alınmasını sağlar.
+
 Yeterlilik Dereceleri:
 90 ve üzeri: A (Mükemmel Verimlilik)
 80-89: B (Yüksek Verimlilik)
@@ -693,6 +712,8 @@ Feedback: High Efficiency. Suitable for most operations.
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 4:
 -  `if-else` deyimini kullanarak bir yılın artık yıl olup olmadığını kontrol eden bir program oluşturun.
 
@@ -700,12 +721,13 @@ Feedback: High Efficiency. Suitable for most operations.
 - Varyant 4 için senaryo:
 ```plaintext
 Mars üssündeki astronot mürettebatı, enerji üretim ekipmanlarının bakımını belirli yıllarda
-gerçekleştiriyor. Ancak bakım planları, Mars yılı takvimine bağlı olarak değişiyor. Mars yılı takvimi Dünya'nın
-artık yıl hesaplama sistemi ile paralel bir mantık izler:
+gerçekleştiriyor. Ancak bakım planları, Mars yılı takvimine bağlı olarak değişiyor. Mars yılı 
+takvimi Dünya'nın artık yıl hesaplama sistemi ile paralel bir mantık izler:
 Artık yıllarda bakım yapılmaz çünkü bu yıllar enerji üretiminin zirve yaptığı yıllardır.
-Artık yıl olmayan yıllarda bakım gereklidir çünkü bu yıllar boyunca enerji üretim kapasitesini en üst düzeyde tutmak
-için düzenli kontrol yapılması gerekir.
-Astronotlar, ekipman bakım döngülerini optimize ederek kritik görevlerde daha fazla zaman kazanmayı hedefliyor.
+Artık yıl olmayan yıllarda bakım gereklidir çünkü bu yıllar boyunca enerji üretim 
+kapasitesini en üst düzeyde tutmak için düzenli kontrol yapılması gerekir.
+Astronotlar, ekipman bakım döngülerini optimize ederek kritik görevlerde daha 
+fazla zaman kazanmayı hedefliyor.
 ```
 
 ## Proje Yapısı
@@ -759,15 +781,19 @@ Maintenance Status Message: Leap Year on Mars No maintenance required. Systems a
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 5:
 -  `when` ifadesini kullanarak basit bir trafik ışığı sistemi simüle eden bir program geliştirin.
 
 ## Senaryo
 - Varyant 5 için senaryo:
 ```plaintext
-Mars kolonisindeki astronotlar, yer altı tünelleri ve yüzey araçlarını güvenle koordine etmek için
-bir trafik ışığı sistemi geliştirmiştir. Bu sistem, ışık renklerine göre astronotların ne yapması gerektiğini
-belirler. When ifadesi kullanılarak bu ışık sistemi simüle edilecektir.
+Mars kolonisindeki astronotlar, yer altı tünelleri ve yüzey araçlarını güvenle koordine 
+etmek için bir trafik ışığı sistemi geliştirmiştir. Bu sistem, ışık renklerine göre 
+astronotların ne yapması gerektiğini belirler. When ifadesi kullanılarak bu ışık sistemi 
+simüle edilecektir.
+
 Trafik ışığı kuralları:
 Yeşil ışık: Araçlar serbestçe hareket edebilir.
 Sarı ışık: Araçlar dikkatli olmalı ve güvenli alandan uzaklaşmamalı.
@@ -824,20 +850,23 @@ Action: Alert faulty system, request assistance
 --------------------------------------------------
 ```
 
-## Diziler (Arrays)
+---
 
-### Varyant 1:
+# Diziler (Arrays)
+
+## Varyant 1:
 - Bir tamsayı dizisi tanımlayın, değerlerle başlatın ve her bir öğeyi yazdırın.
 
-### Varyant 2:
+## Varyant 2:
 - Bir dizideki tüm öğelerin toplamını bulan bir program yazın.
 
 ## Senaryo
 - Varyant 1 ve 2 için senaryo:
 ```plaintext
-Mars üssünde yer alan bilimsel araçlar, günlük olarak belirli miktarda veri topluyor. Bu araçların her birinin
-topladığı verileri bir dizi kullanarak temsil ediyoruz. Program, her bir aracın topladığı veriyi yazdıracak ve tüm
-araçların toplam günlük veri kapasitesini hesaplayarak Mars üssünün günlük veri depolama limitini aşıp aşmadığını
+Mars üssünde yer alan bilimsel araçlar, günlük olarak belirli miktarda veri topluyor. 
+Bu araçların her birinin topladığı verileri bir dizi kullanarak temsil ediyoruz. Program, 
+her bir aracın topladığı veriyi yazdıracak ve tüm araçların toplam günlük veri
+kapasitesini hesaplayarak Mars üssünün günlük veri depolama limitini aşıp aşmadığını 
 kontrol edecek.
 ```
 
@@ -890,16 +919,20 @@ Data Storage Limit Status: Data collection is within the storage limit.
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 3:
 -  Şehir isimlerini içeren bir string dizisi oluşturun ve kullanıcıdan alınan bir şehri dizide arayın.
 
 ## Senaryo
 - Varyant 3 için senaryo:
 ```plaintext
-Mars'ta bulunan koloniler ve araştırma bölgelerinin isimleri bir dizide tutulmaktadır. Görev kontrol ekibi,
-bir astronotun belirttiği koloni bölgesini arayarak o bölgenin durumunu sorgulamak istemektedir. Eğer belirtilen bölge
-dizide mevcutsa, ekibin kontrol sistemine "Koloni bölgesi aktif ve incelenebilir." mesajı gönderilir. Eğer belirtilen
-bölge mevcut değilse, "Koloni bölgesi bulunamadı. Haritayı kontrol edin." mesajı ile astronota bilgi verilir.
+Mars'ta bulunan koloniler ve araştırma bölgelerinin isimleri bir dizide tutulmaktadır. 
+Görev kontrol ekibi, bir astronotun belirttiği koloni bölgesini arayarak o bölgenin 
+durumunu sorgulamak istemektedir. Eğer belirtilen bölge dizide mevcutsa, ekibin kontrol 
+sistemine "Koloni bölgesi aktif ve incelenebilir." mesajı gönderilir. Eğer belirtilen 
+bölge mevcut değilse, "Koloni bölgesi bulunamadı. Haritayı kontrol edin." mesajı ile 
+astronota bilgi verilir.
 ```
 
 ## Proje Yapısı
@@ -953,6 +986,8 @@ Status: Colony zone is active and ready for exploration.
 --------------------------------------------------
 ```
 
+---
+
 ## Varyant 4:
 -  Bir tamsayı dizisindeki en büyük ve en küçük öğeleri bulan bir program yazın.
 
@@ -962,10 +997,12 @@ Status: Colony zone is active and ready for exploration.
 ## Senaryo
 - Varyant 4 ve 5 için senaryo:
 ```plaintext
-Mars'taki kolonilerden gelen veri paketleri, görev başarı oranları ve hava basıncı ölçümlerini içermektedir.
-Görev kontrol ekibi, en yüksek ve en düşük görev başarı oranlarını belirleyerek kolonilerin performansını değerlendirir.
-Ayrıca, hava basıncı ölçümlerinin ortalamasını hesaplayarak kolonilerdeki atmosferik koşulların stabil olup olmadığını
-analiz eder. Bu veriler, kolonilerin genel durumunu izlemek ve günlük operasyonları optimize etmek için kullanılır.
+Mars'taki kolonilerden gelen veri paketleri, görev başarı oranları ve hava basıncı 
+ölçümlerini içermektedir. Görev kontrol ekibi, en yüksek ve en düşük görev başarı 
+oranlarını belirleyerek kolonilerin performansını değerlendirir. Ayrıca, hava basıncı 
+ölçümlerinin ortalamasını hesaplayarak kolonilerdeki atmosferik koşulların stabil olup 
+olmadığını analiz eder. Bu veriler, kolonilerin genel durumunu izlemek ve günlük 
+operasyonları optimize etmek için kullanılır.
 ```
 
 ## Proje Yapısı
@@ -1010,3 +1047,105 @@ Average air pressure method1: 1012,88
 Average air pressure method2: 1012,88
 --------------------------------------------------
 ```
+
+---
+
+#  Scope Fonksiyonları: (Scope Functions)
+## Varyant 1:
+- Nesneler üzerinde işlemler yapmak için `let`, `apply` ve `run` fonksiyonlarını kullanın.
+
+## Açıklamalar:
+1. `let` Fonksiyonu:
+   - `let`, bir nesneyi bir blok içinde işlemler yapmak için kullanılır. Genelde `null` kontrolü veya dönüş değeri gerektiğinde tercih edilir.
+   - `it` Anahtar Kelimesi: Blok içinde nesneye erişmek için `it` kullanılır.
+   - Dönüş Değeri: Blok içerisindeki işlemin sonucunu döndürür.
+-  Kullanım:
+```plaintext 
+val result = nullableVariable?.let {
+    println("Variable is not null: $it")
+    it.length
+}
+```
+
+2. `apply` Fonksiyonu:
+    - `apply`, genellikle bir nesnenin başlatma işlemleri için kullanılır. Bu fonksiyon, nesnenin özelliklerini değiştirir ve aynı nesneyi döndürür.
+    - `this` Anahtar Kelimesi: Blok içinde nesneye this ile erişilir.
+    - Dönüş Değeri: İşlem yapılan nesnenin kendisini döndürür.
+-  Kullanım:
+```plaintext 
+val person = Person().apply {
+    name = "John"
+    age = 25
+}
+```
+
+3. `run` Fonksiyonu:
+    - `run`, bir nesne üzerinde işlemler yapmak ve bir sonuç döndürmek için kullanılır. Daha çok let ve apply karışımı gibi çalışır.
+    - `this` Anahtar Kelimesi: Blok içinde nesneye erişmek için this kullanılır
+    - Dönüş Değeri: Blok içerisindeki işlemin sonucunu döndürür.
+-  Kullanım:
+```plaintext 
+val personInfo = person.run {
+    "Name: $name, Age: $age"
+}
+```
+
+## Senaryo
+- Varyant 1 için senaryo:
+```plaintext
+Mars'ta bir görev yönetim sistemi kuruyoruz. Görevlerin durumu, tamamlanma yüzdesine ve
+önceliğine göre takip ediliyor. Görev bilgileri üzerinde işlem yapmak için let, apply ve 
+run fonksiyonlarını kullanalım.
+```
+## Proje Yapısı
+- Varyant 1 kodları `MarsTask.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── arrays/    
+│    │    └── DailyDataCapacity.kt
+│    │    └── ColonyAreasStatus.kt   
+│    │    └── MarsEnvironmentalAnalysis.kt       
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt     
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt
+│    └── scope_functions/    
+│    │    └── MarsTask.kt
+│    │    
+│    │    
+│    │      
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Check Status
+Task In Progress: %75 done
+--------------------------------------------------
+Task Summary
+Task ID: 100
+Description: Collect rock samples from Olympus Mons
+Priority: High
+Completion: %75
+--------------------------------------------------
+```
+
+---

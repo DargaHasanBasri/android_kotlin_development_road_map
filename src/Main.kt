@@ -14,6 +14,7 @@ import beginner_level.control_flow_statements.MarsTrafficManagement
 import beginner_level.arrays.dailyDataCapacity
 import beginner_level.arrays.searchMarsColony
 import beginner_level.arrays.marsEnvironmentalAnalysis
+import beginner_level.scope_functions.MarsTask
 
 fun main() {
     // println("Variables Content:")
@@ -46,7 +47,7 @@ fun main() {
     // spaceCargoManagement()
 
     // println("Control Flow Statements Content:")
-    // calculateColonyEnergy()w
+    // calculateColonyEnergy()
     // baseEnergyCalculator()
     // calculateEfficiencyPerformance()
     // calculateMaintenanceCalendar()
@@ -55,6 +56,28 @@ fun main() {
     // println("Arrays Content:")
     // dailyDataCapacity()
     // searchMarsColony()
+    // marsEnvironmentalAnalysis()
 
-    marsEnvironmentalAnalysis()
+    // println("Scope Functions Content:")
+    /*
+    val task = MarsTask(taskId = 100).taskInitialize(
+        description = "Collect rock samples from Olympus Mons",
+        priority = "High",
+        completionPercentage = 75,
+    )
+
+    println("-".repeat(50))
+
+    val statusMessage = task.checkStatus()
+    println("Check Status\n$statusMessage")
+
+    println("-".repeat(50))
+
+    val taskSummary = task.generateSummary()
+    println("Task Summary\n$taskSummary")
+
+    println("-".repeat(50))
+     */
+
+    
 }
