@@ -1149,3 +1149,96 @@ Completion: %75
 ```
 
 ---
+
+## Varyant 2:
+- Parametre olarak bir `lambda` alan ve bu lambdayı çalıştıran bir üst düzey (`higher-order`) fonksiyon oluşturun.
+
+## Açıklamalar:
+1. `Higher-order` fonksiyonlar:
+   - Kotlin'de `higher-order` fonksiyon, bir veya daha fazla fonksiyonu parametre olarak alabilen ve/veya bir fonksiyon 
+   döndürebilen fonksiyondur. Bu tür fonksiyonlar, kodunuzu daha modüler, esnek ve yeniden kullanılabilir hale getirir.
+   
+   - Fonksiyonları parametre olarak alır. 
+   - Lambda ifadelerini doğrudan çalıştırarak özelleştirilmiş işlemler yapar. 
+   - Belirli bir işlem için kod tekrarı olmadan farklı sonuçlar döndürebilir.
+
+- `Higher-order` fonksiyonlar
+```plaintext 
+fun higherOrderFunction(number: Int, operation: (Int) -> Int): Int {
+    return operation(number)
+}
+
+fun main() {
+    val result = higherOrderFunction(5) { it * 2 }
+    println("Result: $result") // Çıktı: 10
+}
+```
+
+- Açıklama:
+   1. `operation` Fonksiyonu: 
+      - Bu higher-order fonksiyonun ikinci parametresi, `(Int) -> Int` türünde bir lambda fonksiyonudur. Yani, bir tam sayı alır ve bir tam sayı döndürür.
+      - Lambda ifadesi (`it * 2`) fonksiyonun `operation` parametresine atanır ve çalıştırılır.
+   2. `it` Kullanımı:
+      - `operation` lambda fonksiyonu içinde `it`, higherOrderFunction fonksiyonunun çağrıldığı number parametresini ifade eder.
+      - Bu örnekte, `number` değeri 5 olduğundan `it` de 5 olacaktır.
+  3. Çalışma Akışı::
+     - `higherOrderFunction` fonksiyonunda `operation(number)` çağrılır.
+     - Lambda ifadesi { `it * 2 `} çalıştırılır. Bu, `5 * 2` sonucunu döndürür.
+
+## Senaryo
+- Varyant 2 için senaryo:
+```plaintext
+Mars ortamında farklı görevlerin risk durumlarını analiz eden bir sistem geliştirelim. 
+Sistem şu şekilde çalışır: Görevlerin kritik verileri analiz edilir (örneğin: hava durumu, 
+kaynak tüketimi, enerji durumu). Her görev için bir risk analizi fonksiyonu lambda olarak 
+yazılır ve higher-order fonksiyon ile çalıştırılır.
+```
+## Proje Yapısı
+- Varyant 2 kodları `MissionRiskAnalysis.kt` dosyası içerisindedir.
+```plaintext
+src/
+└── beginner_level/
+│    └── arrays/    
+│    │    └── DailyDataCapacity.kt
+│    │    └── ColonyAreasStatus.kt   
+│    │    └── MarsEnvironmentalAnalysis.kt       
+│    └── control_flow_statements/    
+│    │    └── ColonyEnergyManagement.kt
+│    │    └── BaseEnergyCalculator.kt
+│    │    └── EnergySufficiencyTest.kt
+│    │    └── EquipmentMaintenanceSchedule.kt
+│    │    └── MarsTrafficManagement.kt     
+│    └── keywords/    
+│    │    └── NightDaytimeReport.kt
+│    │    └── MarsBaseInventory.kt
+│    │    └── MarsBaseThermalManagement.kt
+│    │    └── SpaceCargoManagement.kt
+│    └── scope_functions/    
+│    │    └── MarsTask.kt
+│    │    └── MissionRiskAnalysis.kt
+│    │    
+│    │      
+│    └── variables/    
+│    │    └── FoodBag.kt
+│    │    └── AverageWaterConsumption.kt
+│    │    └── GreenhouseArea.kt
+│    │    └── AirTemperature.kt
+└── Main.kt
+```
+
+## 1. Projeyi Çalıştırın
+- Öncelikle çıktısını görmek istediğiniz fonksiyonun yorum satırını kaldırmayı unutmayın!!!
+- Sorun yaşarasınız `Projeyi Klonlayın ve Çalıştırın` aşamasına dönün.
+
+## 2. Beklenen Çıktı
+```plaintext
+--------------------------------------------------
+Task 'Collect Rock Samples' is Low Energy. Safe to proceed.
+--------------------------------------------------
+Task 'Deploy Weather Station' requires extended time. Monitor closely.
+--------------------------------------------------
+Task 'Repair Solar Panels' has an Acceptable Weather Risk.
+--------------------------------------------------
+```
+
+---
